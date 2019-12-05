@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <title> Manilla Vanilla </title>
+  </head>
+  <body bgcolor="lightcyan">
+    <header style="background-color:lightyellow; text-align:center;width:60%;margin-left:20%;">
+      <hr/>
+      <h1>Manilla Vanilla: <span style ="color:lightslategray;"><br/><i>Creamery and Restaurant</i></span></h1>
+      <hr/>
+    </header>
+    <nav >
+      <table bordercolor = "blanchedalmond" bgcolor = "lightyellow" align = "center" border = "3" width = "60%" style="text-align:center;">
+          <tr>
+              <td> <a href = "index.html"> Home </a> </td>
+              <td> <a href = "menu.html"> Menu </a> </td>
+              <td><a href = "contact.html">Contact Us</a></td>
+          </tr>
+      </table>
+    </nav>
+
+    <section style="background-color:lightyellow; width:60%;margin-left:20%;" >
+        <form action="submit.html" method ="Post" style = "margin-left:5%; width:90%;" >
+            <br/>
+            <label for = "name"> Name: </label> <br/>
+            <input type = "text" id="name" name="name"><br/><br/>
+          
+            <label for="email"> Email:</label><br/>
+            <input type = "text" id="email" name="email"><br/><br/>
+          
+            <label for ="phone"> Phone: </label><br/>
+            <input type = "text" id ="phone" name="phone"> <br/><br/>
+          
+            <label for="inquiry">  Reason for Inquiry: </label><br>
+                <select id ="contact" name="contact">
+                    <option value = "default" selected> Catering </option>
+                    <option value = "morning"> Private Party </option>
+                    <option value = "afternoon"> Inquiry </option>
+                </select>
+            <br/>
+            <br/>
+            <label for="info"> Additional Information </label> <br/>
+                <textarea id="info" name="info" rows="5" cols ="60"></textarea><br/><br/>
+                
+            <fieldset>
+              <legend> Have you been to the restaurant? </legend><br/>
+             
+              <input type = "radio" id = "choice1" name = "question" value="yes">
+              <label for = "choice1"> Yes </label><br/>
+             
+              <input type = "radio" id ="choice2" name = "question" value = "no">
+              <label for = "choice2">No </label><br/>
+            </fieldset><br/>
+                      
+            <fieldset>
+              <legend>Best days to contact you:</legend><br />
+             
+              <input type="checkbox" id="monday" name="daysAvailable" value="monday">
+              <label for="monday">Mon</label><br />
+             
+              <input type="checkbox" id="tuesday" name="daysAvailable" value="tuesday">
+              <label for="tuesday">Tues</label> <br/>
+             
+              <input type="checkbox" id="wednesday" name="daysAvailable" value="wednesday">
+              <label for="wednesday">Wed</label><br /> 
+             
+              <input type="checkbox" id="thursday" name="daysAvailable" value="thursday">
+              <label for="thursday">Thurs</label> <br/>
+             
+              <input type="checkbox" id="friday" name="daysAvailable" value="friday">
+              <label for="friday">Fri</label><br/>
+            </fieldset><br/>
+                  
+            <input type="submit" name="submit" value ="Submit">
+      </form>
+     <figure style = "text-align:center">
+      <img src="https://media.giphy.com/media/3ohs7OmhCpC91NkdpK/giphy.gif">
+     </figure> 
+    </section>
+    
+    <footer style="background-color:lightyellow; text-align:center;width:60%;margin-left:20%;">
+            <hr/>  
+            <p>55-66 Vanilla Hill Rd <br/>
+                    Cold Spring Harbor, NY 11111 </p>
+                 <p>Telephone: (777)-666-5555</p>
+                 <br/>
+    </footer>
+  </body>
+</html>
