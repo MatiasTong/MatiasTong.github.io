@@ -7,6 +7,35 @@ Most recent revision:12/04/19
 <html>
   <head>
     <title> Your Matias' Portfolio </title>
+    <link href="styles/main.css" rel="stylesheet" type= "text/css"/>
+    <style>
+    caption {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+      margin-top: 5px;
+    }
+    table, th, td {
+      border: 1px solid #0d1f2d;
+      border-collapse:collapse;
+      padding: 5px 10px;
+    }
+    table{
+      width:90%;
+      margin:auto;
+    }
+    tr {
+    height: 30px;
+  }
+  th{
+    background-color: #1f487e;
+    color:rgb(255,255,255);
+  }
+  tbody tr:nth-child(even) {
+    background-color:rgb(230,230,230);
+   }
+
+    </style>
   </head>
   <body>
     <main>
@@ -35,11 +64,14 @@ Most recent revision:12/04/19
        <img src ="images/nyc.jpg" alt ="Photo of New York Brooklyn Bridge" style ="height:200px;"/>
        <table>
          <caption> Employment History </caption>
+         <thead>
          <tr>
            <th> Years of Employment </th>
            <th> Title </th>
            <th> Company</th>
          </tr>
+         </thead>
+         <tbody>
          <tr>
            <td> 2018-2019 </td>
            <td> GIS Technician </td>
@@ -49,6 +81,7 @@ Most recent revision:12/04/19
            <td> 2012-2016 </td>
            <td> Student </td>
            <td> City College </td>
+         </tbody>
        </table>
        <p> My journey began with a background in biology and environmental research, which has helped shaped my interests and worldview such as in environmental stewardship.</p>
 
@@ -90,7 +123,7 @@ Most recent revision:12/04/19
      </section>
    </main>
    <footer>
-     Copyright Matias Tong 
+     Copyright Matias Tong
    </footer>
   </body>
 </html>
