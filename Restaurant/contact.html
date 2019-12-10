@@ -1,25 +1,41 @@
 <html lang="en">
   <head>
-    <title> Manilla Vanilla </title>
-  </head>
-  <body bgcolor="lightcyan">
-    <header style="background-color:lightyellow; text-align:center;width:60%;margin-left:20%;">
-      <hr/>
-      <h1>Manilla Vanilla: <span style ="color:lightslategray;"><br/><i>Creamery and Restaurant</i></span></h1>
-      <hr/>
-    </header>
-    <nav >
-      <table bordercolor = "blanchedalmond" bgcolor = "lightyellow" align = "center" border = "3" width = "60%" style="text-align:center;">
-          <tr>
-              <td> <a href = "index.html"> Home </a> </td>
-              <td> <a href = "menu.html"> Menu </a> </td>
-              <td><a href = "contact.html">Contact Us</a></td>
-          </tr>
-      </table>
-    </nav>
 
-    <section style="background-color:lightyellow; width:60%;margin-left:20%;" >
-        <form action="submit.html" method ="Post" style = "margin-left:5%; width:90%;" >
+    <title> The Vanilla Hut </title>
+    
+     <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link href="restaurantstyle.css" rel="stylesheet" type= "text/css"/>
+     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+    section{
+      padding:10px;
+      background-color:lightskyblue;
+    }
+
+    form{
+      text-align:left;
+      margin-left:30%;
+    }
+    label{
+      font-weight: bold;
+    }
+    </style>  
+  </head>
+  <body>
+      <header>
+          <h1 class="display-3">The Vanilla Hut</h1>
+        </header>
+        <nav >
+          <a class="btn badge-pill" href = "index.html"> Home </a> 
+          <a class ="btn badge-pill" href = "menu.html"> Menu </a> 
+          <a class = "btn badge-pill" href = "contact.html">Contact Us</a>
+        </nav>
+
+    <section>
+        <form action="submit.html" method ="Post" >
             <br/>
             <label for = "name"> Name: </label> <br/>
             <input type = "text" id="name" name="name"><br/><br/>
@@ -74,15 +90,21 @@
       </form>
      <figure style = "text-align:center">
       <img src="https://media.giphy.com/media/3ohs7OmhCpC91NkdpK/giphy.gif">
-     </figure> 
+     </figure>
+ 
     </section>
     
-    <footer style="background-color:lightyellow; text-align:center;width:60%;margin-left:20%;">
-            <hr/>  
+    <footer>
+           
             <p>55-66 Vanilla Hill Rd <br/>
                     Cold Spring Harbor, NY 11111 </p>
                  <p>Telephone: (777)-666-5555</p>
-                 <br/>
+                 
     </footer>
+    <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </body>
 </html>
