@@ -5,7 +5,7 @@ body{
     background-color:rgb(164, 234, 255);
     font-family:'Open Sans', sans-serif;
     color:black;
-    max-width: 1400;
+    max-width: 1200px;
     margin: 0 auto;
     text-align:center;
     background-image: radial-gradient(#f5ceff 20%, transparent 20%),
@@ -21,12 +21,12 @@ body{
 header{
 background-color:rgb(255, 255, 224);
 font-family: 'Lobster', cursive;
-border-bottom: 8px solid rgb(164, 234, 255); 
+border-bottom: 8px solid rgb(164, 234, 255);
 
 }
 
 footer{
-background-color:rgb(255, 255, 224);   
+background-color:rgb(255, 255, 224);
 font-family:'Open Sans', sans-serif;
 }
 
@@ -66,4 +66,3 @@ nav {
 #text{
     background-color:white;
 }
-
