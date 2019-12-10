@@ -40,8 +40,11 @@ nav .btn {
     background-color: #7e5032ce;
     color: #fef9ff;
     font-family:'Indie Flower', cursive;
-    font-size: larger;
+    font-size:larger;
     font-weight: bolder;
+    padding:10px;
+    margin-left:10px;
+    margin-right:10px
   }
 
   nav .btn:hover{
