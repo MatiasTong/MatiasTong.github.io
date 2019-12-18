@@ -1,0 +1,59 @@
+<!-- Created By: Matias Tong
+Date Created: 12/18/19
+Last Modification: 12/18/19-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Evens</title>
+    <script type = "text/JavaScript" src = "displayEvens.js" ></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        header{
+            text-align: center;
+        }
+
+        form{
+            width:80%
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+    <header><h1>Display Evens</h1></header>
+    <form class = "form-inline" name = "displayEvens" onsubmit = "return findevens();" >
+        <div class = "form-group">
+            <label for = "startNum"> Starting Number </label>
+            <input class = "form-control" id = "startNum" type = "number">  
+        </div>
+        <div class = "form-group">
+            <label for = "endNum"> Ending Number </label>
+            <input class ="form-control" id = "endNum" type = "number">
+        </div>
+        <div class ="form-group">
+            <label for = "step"> Step </label>
+            <input class = "form-control" id = "step" type = "number">
+        </div>
+        <button type = "submit" id = "submitButton" class="btn btn-default">
+            Submit
+        </button>
+        <button type = "reset" id = "resetButton" class = "btn btn-default">
+            Reset
+        </button>
+    </form>
+
+    <table>
+        <tr>
+            <th> Result </th>
+        </tr>
+        <tr>
+            <td id = "sequence"> </td>
+        </tr>
+    </table>>
+
+
+
+    </div> <!--container-->
+
+</body>
+</html>
