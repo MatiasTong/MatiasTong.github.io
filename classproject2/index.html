@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+   input[type="submit"]{
+       font-size: 1.5rem
+   }
+   #input-group{
+       background-color: cornflowerblue;
+   }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body class="bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pb-3">Lunch Predictor</h1>
+            <!-- making the form -->
+            <form id="main-form" onsubmit="return readyLunch();" >
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">How Much Carbs Are You Craving?</span>
+                  <input type="number" class="form-control" id="carb" placeholder="Enter a Number, 1-10">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">How Much Protein Do You Want??</span>
+                  <input type="number" class="form-control" id="protein" placeholder="Enter a Number, 1-10">
+                </div>
+              </div>
+                
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">How Much Greens Do You Want?</span>
+                    <input type="number" class="form-control" id="greens" placeholder="Enter a Number, 1-10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">How Much Fat Do You Want Today?</span>
+                    <input type="number" class="form-control" id="fat" placeholder="Enter a Number, 1-10">
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">How Much Spice Do You Want??</span>
+                  <input type="number" class="form-control" id="spicy" placeholder="Enter a Number, 1-10">
+                </div>
+            </div>
+              <div class="form-group" style="background-color: red; color: white;">
+                <h5>Caution: Be Gentle with the Spices</h5>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Are you ready for your lunch?" class="btn btn-dark btn-block">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class = "col-md-6">
+        <div class="card card-body text-center mt-5" >
+            <!-- main stock image -->
+            <div id = "lunch-image">
+                <img src="http://godlessmom.com/wp-content/uploads/2015/05/Question-mark-red-3D-glossy.jpg" 
+                style ="height: 28rem; "/>
+            </div>
+            <!-- collection of lunch images -->
+            <!-- Case 1: vegetarian, input only for greens -->
+            <div class = "result" id ="garden-salad" style = "display:none;">
+                <img src="http://www.southernladymagazine.com/wp-content/uploads/2015/06/SummerSalad.jpg" style ="height: 25rem;"/>
+                <h2><span id ="garden-salad-caption"></span></h2>
+            </div>
+            <!-- Not Hungry or Very Hungry -->
+            <div class = "result" id ="not-hungry" style = "display:none;">
+                <img src="http://www.quickmeme.com/img/72/7225ff7fe4deeeecb372dda2de4c6497103f3441c8a0caff4e60209c2eaa5fbe.jpg" 
+                style ="height: 25rem; width: 30rem;"/>
+                <h2><span id ="not-hungry-caption"></span></h2>
+            </div>
+
+            <div class = "result" id ="very-hungry" style = "display:none;">
+                <img src="https://sayingimages.com/wp-content/uploads/when-you-clog-bathroom-meme.jpg" 
+                style ="height: 25rem; width: 30rem;"/>
+                <h2><span id ="very-hungry-caption"></span></h2>
+            </div>
+
+            <!-- Case 2: max carb -->
+            <div class = "result" id ="mashed-potatoes" style = "display:none;">
+                <img src="https://www.skinnytaste.com/wp-content/uploads/2018/01/Instant-Pot-Mashed-Potatoes-1-5.jpg" style ="height: 25rem;"/>
+                <h2><span id ="mashed-potatoes-caption"></span></h2>
+            </div>
+            
+            <!-- Case 3: max protein -->
+            <div class = "result" id ="steak" style = "display:none;">
+                <img src="http://s6856.pcdn.co/wp-content/uploads/2011/02/grilled-Steak-with-Steakhouse-Butter.jpg" style ="height: 25rem;"/>
+                <h2><span id ="steak-caption"></span></h2>
+            </div>
+
+            <!-- Case 4: max greens same as case 1-->
+
+            <!-- Case 5: max fat -->
+            <div class = "result" id ="macdonalds" style = "display:none;">
+                <img src="https://images.baklol.com/12_jpeg050203bb6115bf40c1af6fea7c176272.jpeg" style ="height: 25rem;"/>
+                <h2><span id ="macdonalds-caption"></span></h2>
+            </div>
+          
+            <!-- Case 6: max spiciness -->
+            <div class = "result" id ="spicy-max" style = "display:none;">
+                <img src="https://i.kym-cdn.com/photos/images/newsfeed/000/744/316/c12.jpg" style ="height: 25rem;"/>
+                <h2><span id ="spicy-max-caption"></span></h2>
+            </div>
+
+            <!-- Case 6: moderate spiciness -->
+            <div class = "result"  id ="bucket-hot-sauce" style = "display:none;">
+                <img src="https://cdnimg.webstaurantstore.com/images/products/large/62874/1830908.jpg" style ="height: 22rem;"/>
+                <h2><span id ="bucket-hot-sauce-caption"></span></h2>
+            </div>
+
+            <!-- Two fields greater than the others -->
+            <!-- Case 7: Higher Carb + Protein -->
+            <div class = "result" id ="hamburger" style = "display:none;">
+                <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/165384.jpg" style ="height: 25rem;"/>
+                <h2><span id ="hamburger-caption"></span></h2>
+            </div>
+
+            <!-- Case 8 -->
+            <div class = "result" id ="tofu-bowl" style = "display:none;">
+                <img src="https://veggiechick.com/wp-content/uploads/2017/11/Tofu_Sweet_Potato_Bowl_7.jpg" style ="height: 25rem;"/>
+                <h2><span id ="tofu-bowl-caption"></span></h2>
+            </div>
+
+            <!-- Case 9 -->
+            <div class = "result" id ="buffalo-wings" style = "display:none;">
+                <img src="https://homemadehooplah.com/wp-content/uploads/2019/01/buffalo-chicken-wings-1.jpg" style ="height: 25rem;"/>
+                <h2><span id ="buffalo-wings-caption"></span></h2>
+            </div>
+
+            <!-- Case 10 -->
+            <div class = "result" id ="cheeseburger" style = "display:none;">
+                <img src="http://www.smokinjoesgrill.com/wp-content/uploads/2015/02/hamburger-cropped2.jpg" style ="height: 25rem;"/>
+                <h2><span id ="cheeseburger-caption"></span></h2>
+            </div>
+
+             <!-- Case 11: random food sorting -->
+             <div class = "result" id ="pizza" style = "display:none;">
+                <img src="https://www.melaniecooks.com/wp-content/uploads/2008/05/hawaiian-pineapple-pizza.jpg" style ="height: 25rem;"/>
+                <h2><span id ="pizza-caption"></span></h2>
+            </div>
+
+            <div class = "result" id ="spaghetti" style = "display:none;">
+                <img src="https://www.yellowblissroad.com/wp-content/uploads/2019/06/Spaghetti-Pomodoro-with-Meatballs-2-of-6.jpg" style ="height: 25rem;"/>
+                <h2><span id ="spaghetti-caption"></span></h2>
+            </div>
+            
+            <div class = "result" id ="halal-food" style = "display:none;">
+                <img src="https://newfoodeconomy.org/wp-content/uploads/2019/07/halal-food-july-2019.jpg" style ="height: 25rem; width: 30rem;"/>
+                <h2><span id ="halal-food-caption"></span></h2>
+            </div>
+
+            <div class = "result" id ="stir-fry" style = "display:none;">
+                <img src="https://cdn.diys.com/wp-content/uploads/2016/01/Spicy-chicken-stir-fry-finished-tall.jpg" style ="height: 25rem;"/>
+                <h2><span id ="stir-fry-caption"></span></h2>
+            </div>
+            
+            <div class = "result" id ="empanadas" style = "display:none;">
+                <img src="https://www.curiouscuisiniere.com/wp-content/uploads/2018/09/Bolivian-Chicken-Empanadas.450-450x375.jpg" style ="height: 25rem;"/>
+                <h2><span id ="empanadas-caption"></span></h2>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+
+            
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
