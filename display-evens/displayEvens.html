@@ -21,7 +21,7 @@ Last Modification: 12/18/19-->
 <body>
     <div class = "container">
     <header><h1>Display Evens</h1></header>
-    <form class = "form-inline" name = "displayEvens" onsubmit = "return findevens();" >
+    <form class = "form-inline" name = "displayEvens" onsubmit = "return findevens();" onreset = "resetform();"  >
         <div class = "form-group">
             <label for = "startNum"> Starting Number </label>
             <input class = "form-control" id = "startNum" type = "number">  
@@ -41,15 +41,16 @@ Last Modification: 12/18/19-->
             Reset
         </button>
     </form>
-
-    <table>
+<div >
+    <table id="table-result" style="display:none;">
         <tr>
             <th> Result </th>
         </tr>
         <tr>
             <td id = "sequence"> </td>
         </tr>
-    </table>>
+    </tableid="table-result" style="display:none;">
+</div>
 
 
 
