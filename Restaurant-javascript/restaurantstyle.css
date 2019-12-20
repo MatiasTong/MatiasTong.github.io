@@ -54,6 +54,13 @@ nav .btn {
     background-color:#7e503259;
   }
 
+  nav #homeButton.btn:hover{
+    font-weight: bolder;
+    color: rgb(0,249,255);
+    background-color:#7e503259;
+  }
+
+  
 
 
 nav {
