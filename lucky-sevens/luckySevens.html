@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lucky Sevens</title> 
+    <title>Lucky Sevens</title>
     <script type="text/JavaScript" src = "luckySevens.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <style>
@@ -18,24 +18,26 @@
     <button onclick="play()"> Play </button>
     <br>
     <br>
+<div id="results" style="display:none;">
 <h2>Results</h2>
-<table>
+<table >
     <tr>
         <th>Starting Bet</th>
-        <td> 8 </td>
+        <td id="start"> </td>
     </tr>
     <tr>
         <th>Total Rolls Before Going Broke</th>
-        <td> 8 </td>
+        <td id = "rolls">  </td>
     </tr>
     <tr>
          <th>Highest Amount Won</th>
-         <td> 8 </td>
+         <td id = "maxAmount"> 8 </td>
     </tr>
     <tr>
         <th>Roll Count At Highest Amount Won</th>
-        <td> 8 </td>
+        <td id = rollsHigh> 8 </td>
     </tr>
+  </div>
 </table>
 </body>
 </html>
