@@ -32,7 +32,7 @@ font-family:'Open Sans', sans-serif;
 }
 
 
-nav .btn:visited{
+nav .mainNav.btn:visited{
     background-color:rgb(221, 44, 74);
     color:white
     }
@@ -48,7 +48,7 @@ nav .btn {
     margin-right:10px
   }
 
-  nav .btn:hover{
+  nav .mainNav.btn:hover{
     font-weight: bolder;
     color: rgb(255, 237, 73);
     background-color:#7e503259;
@@ -60,7 +60,10 @@ nav .btn {
     background-color:#7e503259;
   }
 
-  
+  #sideButton {
+    float: left;
+
+  }
 
 
 nav {
