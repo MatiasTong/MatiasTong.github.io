@@ -1,0 +1,59 @@
+/* Creator: Matias Tong
+   Date Created: 12/06/19
+   Date Last Modified: 12/06/19 */
+
+body {
+  background-color: #fef9ff;
+  font-family: arial, helvetica, sans-serif;
+  color: #0d1f2d;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jumbotron{
+  background-image: url("https://images.unsplash.com/photo-1479981280584-037818c1297d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-size: cover;
+  margin: 2px 0px;
+ 
+  
+}
+/*heading*/
+footer{
+  background-color: #5d7d87;
+  color:#fef9ff;
+  height: 100px;
+  text-align: center;
+  padding: 30px 10px 20px 10px;
+}
+h1{
+  font-size: 2.5em;
+}
+
+article{
+  margin-bottom: 16px;
+}
+
+
+
+nav a{
+  background-color: #0794be;
+  color: #fef9ff;
+  font-weight:bold;
+  padding: 8px;
+  border:thin solid #0d1f2d;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 0px 20px;
+}
+nav a:visited{
+  color:#e4c3ad;
+}
+nav a:hover{
+  background-color: #31f541;
+  color:#e4c3ad;
+}
+
+nav a:active{
+  font-weight:bold;
+}

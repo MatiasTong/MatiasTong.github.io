@@ -1,0 +1,71 @@
+/* Creator: Matias Tong
+Date Created: 12/09/19
+Date of Most Recent Revision:*/
+body{
+    background-color:rgb(164, 234, 255);
+    font-family:'Open Sans', sans-serif;
+    color:black;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align:center;
+    background-image: radial-gradient(#f5ceff 20%, transparent 20%),
+     radial-gradient(#fafafa 20%, transparent 20%);
+  background-color: #bde7ff;
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+  height: 200px;
+  width: 100%;
+}
+
+
+header{
+background-color:rgb(255, 255, 224);
+font-family: 'Lobster', cursive;
+border-bottom: 8px solid rgb(164, 234, 255);
+
+}
+
+footer{
+background-color:rgb(255, 255, 224);
+font-family:'Open Sans', sans-serif;
+}
+
+
+nav .btn:visited{
+    background-color:rgb(221, 44, 74);
+    color:white
+    }
+
+nav .btn {
+    background-color: #7e5032ce;
+    color: #fef9ff;
+    font-family:'Indie Flower', cursive;
+    font-size:larger;
+    font-weight: bolder;
+    padding:10px;
+    margin-left:10px;
+    margin-right:10px
+  }
+
+  nav .btn:hover{
+    font-weight: bolder;
+    color: rgb(255, 237, 73);
+    background-color:#7e503259;
+  }
+
+
+
+nav {
+    background-color:rgb(241, 169, 255);
+    padding: 10px 0px 10px 0px;
+    border-bottom: 5px dashed rgb(255, 84, 255);
+    border-top: 5px solid rgb(79, 110, 248);
+}
+
+#imagebox{
+    background-color: white;
+}
+
+#text{
+    background-color:white;
+}

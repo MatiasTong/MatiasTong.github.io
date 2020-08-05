@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lucky Sevens</title>
+    <script type="text/JavaScript" src = "luckySevens.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+    td {
+        padding : 2px 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Lucky Sevens</h1>
+    Starting bet: <input id ="startBet">
+    <br>
+    <button onclick="play()"> Play </button>
+    <br>
+    <br>
+<div id="results" style="display:none;">
+<h2>Results</h2>
+<table >
+    <tr>
+        <th>Starting Bet</th>
+        <td id="start"> </td>
+    </tr>
+    <tr>
+        <th>Total Rolls Before Going Broke</th>
+        <td id = "rolls">  </td>
+    </tr>
+    <tr>
+         <th>Highest Amount Won</th>
+         <td id = "maxAmount"> 8 </td>
+    </tr>
+    <tr>
+        <th>Roll Count At Highest Amount Won</th>
+        <td id = rollsHigh> 8 </td>
+    </tr>
+  </div>
+</table>
+</body>
+</html>

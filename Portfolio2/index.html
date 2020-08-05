@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+Name: Matias Tong
+Date Created: 12/03/19
+Most recent revision:12/04/19
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title> Matias' Portfolio </title>
+    
+    <link href="styles/main.css" rel="stylesheet" type= "text/css"/>
+    <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    
+    <style>
+    caption {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+      margin-top: 5px;
+    }
+    table, th, td {
+      border: 1px solid #0d1f2d;
+      border-collapse:collapse;
+      padding: 5px 10px;
+    }
+    table{
+      width:90%;
+      margin:auto;
+    }
+    tr {
+    height: 30px;
+  }
+  th{
+    background-color: #1f487e;
+    color:rgb(255,255,255);
+  }
+  tbody tr:nth-child(even) {
+    background-color:rgb(230,230,230);
+   }
+
+  
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container"> <!-- All page content should be inside this .container div -->
+    <main>
+    <header class="jumbotron">
+        <h1>Matias Tong</h1>
+        <h2 class="font-italic">Web Developer Extraordinaire</h2>
+    </header>
+    
+    <nav>
+       <a class="btn btn-default font-weight-bold" href="index.html"> Home </a>
+       <a class="btn btn-default font-weight-bold " href ="project.html"> Projects </a>
+       <a class="btn btn-default font-weight-bold" href ="contact.html"> Contact </a>
+       <a class="btn btn-default font-weight-bold " href ="testimonials.html">Testimonials </a> 
+    </nav>
+   
+   <!--We need to add links to projects.html, contact.html, and testimonials.html -->
+
+     <section>
+       <article>
+         <h2> <em> About Me </em> </h2>
+         <img src = "images/matias.jpg" alt="Portrait of Matias" style = "width : 200px;"/>
+         <p id="padding1">   I like to think of myself as an adventurer, ready to trying new things and excited to tackle everyday challenges.  This past November I started my journey to become a full stack web developer through the Laguardia CC Techhire Program. </p>
+
+         <p id = "padding2"> Becoming a full stack developer allows me to exhibit my creative side and use websites as my canvas. Creating software and building websites that make a positive difference in the lives of many people is something I hope to achieve as a full stack web developer. Join me on my techhire journey! </p>
+       </article>
+
+       <article>
+       <h2> <em> Past Experiences </em> </h2>
+
+       <img src ="images/nyc.jpg" alt ="Photo of New York Brooklyn Bridge" style ="height:200px;"/>
+       <table>
+         <caption> Employment History </caption>
+         <thead>
+         <tr>
+           <th> Years of Employment </th>
+           <th> Title </th>
+           <th> Company</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr>
+           <td> 2018-2019 </td>
+           <td> GIS Technician </td>
+           <td> The Nature Conservancy </td>
+         </tr>
+         <tr>
+           <td> 2012-2016 </td>
+           <td> Student </td>
+           <td> City College </td>
+         </tbody>
+       </table>
+    
+       <p> My journey began with a background in biology and environmental research, which has helped shaped my interests and worldview such as in environmental stewardship.</p>
+
+       <p> My interests include learning about topics at the intersection of biology and technology like in medicine, healthcare and biotechnology. As an artist, I enjoy drawing, painting, and using different combinations of colors and textures to create interesting pieces.</p>
+
+
+       </article>
+
+       <article>
+       <h2> <em> Hobbies </em> </h2>
+       <img src ="images/agate.jpg" alt = "photo of rock" style = "height:200px;"/>
+       <ul>
+         <li>Hobbies</li>
+           <ol>
+             <li>Fishing</li>
+             <li>Swimming</li>
+             <li>Rockhounding</li>
+           </ol>
+         <li>Sports</li>
+           <ol>
+             <li> Basketball </li>
+             <li> Soccer</li>
+             <li> Tennis </li>
+           </ol>
+       </ul>
+       <ul>
+          <li>Books</li>
+            <ul>
+              <li>Sherlock Holmes</li>
+              <li>The ScrewTape Letters</li>
+              <li>Chronicles of Narnia</li>
+            </ul>
+          <li>Food</li>
+            <ul>
+              <li> Ramen</li>
+              <li> Empanadas</li>
+              <li> Pho </li>
+           </ul>
+         </ul>
+       </div>
+          
+       </article>
+     </section>
+   </main>
+   <footer>
+     Copyright Matias Tong
+   </footer>
+  </div> <!-- End of .container div -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
