@@ -2,220 +2,484 @@
 <html>
 
 <head>
-  <title>Portfolio</title>
-  <style>
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #212529;
-      /* text-align: left; */
-      background-color: #fff;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Matias Tong</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <script src="https://kit.fontawesome.com/16c75b70ae.js" crossorigin="anonymous"></script>
+    <!-- carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen">
+    <style>
+        #header {
+            background: url("https://images.unsplash.com/photo-1535136104956-115a2cd67fc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80") 0 0 no-repeat fixed;
+            height: 100%;
+            overflow: hidden;
+            color: #FFFFFF;
+            z-index: -1;
+        }
 
-    .backicon {
-      text-shadow: 0 0 10px rgb(156, 156, 156);
-    }
-
-    .icon:hover {
-      color: rgb(255, 0, 234);
-    }
-
-    .sidebar-nav a {
-      display: block;
-    }
-
-    .jumbotron {
-      position: relative;
-      background-image: url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
-      background-size: cover;
-      height: 350px;
-    }
-
-    .jumbotron>.overlay {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(117, 117, 117, 0.295);
-      z-index: 1;
-      border: 2px solid blue;
-      text-align: center;
-      color:white;
-    }
-
-    .jumbotron > .inner {
-    justify-self: center;  
-    position: relative;
-    z-index: 2;
-    margin-left: 10%;
-    border: 2px solid red;
-    color: white
+/* Bob */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+.hvr-bob {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }
 
-    .hvr-grow {
-      display: flex;
-      align-content: center;
-      -webkit-transform: perspective(1px) translateZ(0);
-      transform: perspective(1px) translateZ(0);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
-      -webkit-transition-property: transform;
-      transition-property: transform;
-    }
+/* Buzz Out */
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.hvr-buzz-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-buzz-out:hover, .hvr-buzz-out:focus, .hvr-buzz-out:active {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 
-    .hvr-grow:hover,
-    .hvr-grow:focus,
-    .hvr-grow:active {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-  </style>
-  <!--Bootstrap CSS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/16c75b70ae.js" crossorigin="anonymous"></script>
+
+        .hvr-grow {
+            display: flex;
+            align-content: center;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+        }
+
+        .hvr-grow:hover,
+        .hvr-grow:focus,
+        .hvr-grow:active {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            background: rgb(255, 255, 255);
+        }
+
+        .gallery-cell {
+            width: 20%;
+            height: auto;
+            margin-right: 10px;
+            /* background: #8C8; */
+            /* counter-increment: gallery-cell; */
+        }
+
+        .gallery-cell img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* cell number */
+        .gallery-cell:before {
+            display: block;
+            text-align: center;
+            /* content: counter(gallery-cell); */
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+
+
+        }
+
+        @media screen and (min-width: 768px) {
+            .carousel-cell {
+                height: 400px;
+            }
+
+            @media screen and (min-width: 960px) {
+                .carousel-cell {
+                    width: 60%;
+                }
+            }
+        }
+    </style>
+
 </head>
 
-<body style="background-color :rgb(228, 228, 228);">
-
-
-
-  <div class="row" style="height:100%;">
-    <aside class="card p-3 mb-2 ml-4 mt-2 col-3 shadow rounded justify-content-center"
-      style="background-image: linear-gradient(to right, rgba(0, 144, 211, 0.5), rgba(0, 82, 190, 0.459)); height:100%;">
-
-      <h1 style="color:rgb(20, 20, 20); text-align: center; font-size: large;">Matias Tong</h1>
-      <img src="img/portrait.png" style="height:200px; border-radius: 50%;" class="mx-auto d-block border-light"
-        alt="...">
-
-      <!-- <div class="sidebar-nav">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
-        </div> -->
-
-
-      <section class="row justify-content-center">
-
-        <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
-          <span class="fa-stack fa-2x">
-            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgb(105, 104, 104); "></i>
-            <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
-          </span>
-        </a>
-        <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
-          <span class="fa-stack fa-2x">
-            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgb(105, 104, 104); "></i>
-            <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
-          </span>
-        </a>
-        <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
-          <span class="fa-stack fa-2x">
-            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgb(105, 104, 104); "></i>
-            <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
-          </span>
-        </a>
-
-      </section>
-
-    </aside>
-
-
-
-
-
-    <!-- <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
-           
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo hvr-bob hvr-bob-float" href="index.html">Matias Tong</a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item navbar-text" role="presentation"><a class="nav-link active"
+                            href="index.html">Home</a></li>
+                    <li class="nav-item navbar-text" role="presentation"><a class="nav-link"
+                            href="projects-grid-cards.html">Projects</a></li>
+                    <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
+                    <!-- <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="hire-me.html">Hire
+                            me</a></li> -->
+                </ul>
             </div>
-          </div> -->
 
+            <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
+                <span class="fa-stack fa-1x">
+                    <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.651); "></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
+                </span>
+            </a>
 
+            <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
+                <span class="fa-stack fa-1x">
+                    <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.651); "></i>
+                    <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
+                </span>
+            </a>
 
-
-    <div class="col-8 card shadow  px-0 mb-5 ml-2 mt-2 rounded main" style="background-color: rgb(255, 255, 255);">
-
-      <!-- <img class="card-img" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80" alt="Card image">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p>
-      </div> -->
-
-
-      <div class="jumbotron">
-        <div class="overlay">
-          <div class="inner row mt-auto py-5 justify-content-center" style="border: 1px solid red;">
-            <h1 class ="col-12">"Hi! My name is Matias. I'm a full stack web developer"</h1>
-            <p class = "col-12">Tagline</p>
-            <p class = "col-12">
-              <a class="btn btn-primary btn-large">
-                Learn more
-              </a>
-            </p>
-          </div>
         </div>
-      </div>
-      </div>
+    </nav>
+    <main class="page lanidng-page">
+        <div id="header">
+            <section class="portfolio-block website gradient"
+                style=" background: linear-gradient(120deg,#2f358086,#94924669);">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-12 col-lg-5 offset-lg-1 text">
+                            <h2 style="font-weight: bold;">Hi there!</h2>
+                            <h3>I'm <strong>Matias Tong</strong>. I am an aspiring full stack web developer with a passion
+                                for
+                                building things with an impact.</h3>
+                            <a href ="cv.html" ><button class="btn btn-outline-primary btn-lg hvr-buzz-out" type="button" style="font-size: 1.8rem;"> 👋</button></a>
+                        </div>
+                        <div class="col-sm-12 col-lg-5 ">
+                            <!-- <div class="portfolio-laptop-mockup"> -->
+                            <!-- <div class="screen"> -->
+                            <img src="img/portrait.png" class="img-thumbnail"
+                                style="height:200px; width:200px; border-radius: 50%;"></img>
+                            <!-- </div> -->
+                            <!-- <div class="keyboard"></div> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="portfolio-block skills">
+            <div class="container">
+                <div class="heading mb-0 pb-0">
+                    <h2>Special Skills</h2>
+                </div>
+                <div class="row mt-0 mb-3">
+                    <div class="col-12 gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/java.png" class="img-fluid"
+                                style=" border-radius: 50%; display:inline-block;"></img>
+
+                        </div>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/spring.png" class="img-fluid"
+                                style="  border-radius: 50%; display:inline-block;"></img>
+
+                        </div>
+                        <div class=" gallery-cell justify-content-center">
+                            <img src="img/languages/javascript.png" class="img-fluid"
+                                style="border-radius: 50%; display:inline-block;"></img>
+
+                        </div>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/html.png" class="img-fluid"
+                                style=" border-radius: 50%; display:inline-block;"></img>
+                        </div>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/css.png" class="img-fluid"
+                                style=" border-radius: 50%; display:inline-block;"></img>
+                        </div>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/bootstrap.png" class="img-fluid"
+                                style=" border-radius: 50%; display:inline-block;"></img>
+                        </div>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/arcgis.png" class="img-fluid"
+                                style=" border-radius: 50%; display:inline-block;"></img>
+                        </div>
+                        <div class="gallery-cell justify-content-center">
+                            <img src="img/languages/r.png" class="img-fluid"
+                                style=" border-radius: 50%; display:inline-block;"></img>
+                        </div>
 
 
-      <div class="col-8 card shadow  px-0 mb-5 ml-2 mt-2 rounded main" style="background-color: rgb(255, 255, 255);">
-      <section style="margin-left:25%; font-size:140%;">
-        <ul style="list-style-type:none;">
-          <li> <strong> My Links </strong></li>
-          <ul>
-            <li><a href="Portfolio/index.html"> My Portfolio </a> </li>
-            <li> <a href="https://codesprout.code.blog/"> My Blog </a></li>
-            <li> <a href="https://github.com/MatiasTong/"> My GitHub </a></li> <br />
-          </ul>
-          <li> <strong> My Projects </strong> </li>
-          <ul>
-            <li> <a href="Restaurant-html/index.html"> Restaurant Site </a></li>
-            <li> <a href="Restaurant-css/index.html"> Restaurant Site with CSS </a></li>
-            <li> <a href="Restaurant-javascript/index.html"> Restaurant Site with Javascript</li>
-            <li> <a href="lucky-sevens/index.html"> Lucky Sevens</li>
-          </ul>
-        </ul>
-      </section>
-      <hr />
-      <figure style="text-align:center;">
-        <img src="https://media.giphy.com/media/39BdMOJMK2YVqktnlS/giphy.gif" style="width:50%;">
-      </figure>
-    </div>
-
-  </div>
+                    </div>
 
 
+                </div>
+            </div>
+        </section>
 
-  <hr />
+
+        <section class="portfolio-block block-intro " style="background-color: rgb(248, 248, 248);">
+            <div class="container-fluid">
+                <div class="about-me">
+                    <p style="font-size: 2rem">“Give a man a program, frustrate him for a day.
+                        Teach a man to program, frustrate him for a lifetime.” – Muhammad Waseem.</p>
+
+                        <!-- “Programmer — an organism that turns coffee into software” anonymous quote -->
+                    <!-- <a class="btn btn-outline-primary" role="button" href="#">Hire me</a> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-block skills border-bottom-0 pb-2 mb-2 ">
+            <div class="container">
+                <div class="heading mb-3 pb-3">
+                    <h2>Featured Project</h2>
+                </div>
+                <!-- <div class="row no-gutters">
+                    <div class="col-7 item"><a href="#">
+                            <img class="img-fluid image" src="assets/img/nature/image5.jpg">
+                        </a>
+                    </div>
+                    <div class="col-5">
+                        <p style ="font-size: 2rem">“ Code is like humor. When you have to explain it, it’s bad.” – Cory House.</p>
+                        <a class="btn btn-outline-primary" role="button" href="#">Hire me</a> 
+                    </div> -->
+
+            </div>
+        </section>
+
+        <section class="portfolio-block photography">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img class="img-fluid image"
+                                src="img/bloghome2.png"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img class="img-fluid image"
+                                src="img/blogdashboard.png"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img class="img-fluid image"
+                                src="img/superhero.png"></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block call-to-action border-bottom pt-4">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content">
+                    <h3 class="mr-2"></h3><a href="projects-grid-cards.html" class="ml-0 btn btn-outline-primary btn-md">Projects
+                        <span>
+                            <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
 
-  </main>
+    </main>
+    <!-- <section class="portfolio-block website gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-5 offset-lg-1 text">
+                    <h3>Website Project</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est
+                        sed, efr nunc, vivamus vel accumsan dui. Quisque ac dolor cursus, volutpat nisl vel, porttitor
+                        eros.</p>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="portfolio-laptop-mockup">
+                        <div class="screen">
+                            <div class="screen-content"
+                                style="background-image:url(&quot;assets/img/tech/image6.png&quot;);"></div>
+                        </div>
+                        <div class="keyboard"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links">
+                <!-- <a href="#">About me</a> -->
+                <a href="index.html">Home</a>
+                <a href="projects-grid-cards.html">Projects</a></div>
+            <div class="row justify-content-center mt-4">
+                <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
+                    <span class="fa-stack fa-1x">
+                        <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
+                    </span>
+                </a>
+    
+                <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
+                    <span class="fa-stack fa-1x">
+                        <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
+                        <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
+                    </span>
+                </a>
 
-  <!--Bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-
+            </div>
+        </div>
+    </footer>
+    <!-- carousel -->
+    <script>
+        var flkty = new Flickity('.main-gallery', {
+            // options
+            cellAlign: 'left',
+            contain: true
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
