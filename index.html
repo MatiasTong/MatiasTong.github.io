@@ -2,388 +2,426 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Matias Tong</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    <script src="https://kit.fontawesome.com/16c75b70ae.js" crossorigin="anonymous"></script>
-    <!-- carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen">
-    <style>
-        #header {
-            background: url("https://images.unsplash.com/photo-1535136104956-115a2cd67fc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80") 0 0 no-repeat fixed;
-            height: 100%;
-            overflow: hidden;
-            color: #FFFFFF;
-            z-index: -1;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Matias Tong</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+  <script src="https://kit.fontawesome.com/16c75b70ae.js" crossorigin="anonymous"></script>
+  <!-- carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen">
+  <style>
+    #header {
+      background: url("img/bg1.png") 0 0 no-repeat fixed;
+      /* background-position: center; */
+      background-size: cover;
+      height: 100%;
+      overflow: hidden;
+      color: #FFFFFF;
+      z-index: -1;
+    }
+
+    /* Bob */
+    @-webkit-keyframes hvr-bob {
+      0% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
+
+      50% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+      }
+
+      100% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes hvr-bob {
+      0% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
+
+      50% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+      }
+
+      100% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
+    }
+
+    @-webkit-keyframes hvr-bob-float {
+      100% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes hvr-bob-float {
+      100% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+      }
+    }
+
+    .hvr-bob {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+
+    .hvr-bob:hover,
+    .hvr-bob:focus,
+    .hvr-bob:active {
+      -webkit-animation-name: hvr-bob-float, hvr-bob;
+      animation-name: hvr-bob-float, hvr-bob;
+      -webkit-animation-duration: .3s, 1.5s;
+      animation-duration: .3s, 1.5s;
+      -webkit-animation-delay: 0s, .3s;
+      animation-delay: 0s, .3s;
+      -webkit-animation-timing-function: ease-out, ease-in-out;
+      animation-timing-function: ease-out, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+      animation-iteration-count: 1, infinite;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-direction: normal, alternate;
+      animation-direction: normal, alternate;
+    }
+
+    /* Buzz Out */
+    @-webkit-keyframes hvr-buzz-out {
+      10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+      }
+
+      20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+      }
+
+      30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+      }
+
+      40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+      }
+
+      50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+      }
+
+      60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+      }
+
+      70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+      }
+
+      80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+      }
+
+      90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+      }
+
+      100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+      }
+    }
+
+    @keyframes hvr-buzz-out {
+      10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+      }
+
+      20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+      }
+
+      30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+      }
+
+      40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+      }
+
+      50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+      }
+
+      60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+      }
+
+      70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+      }
+
+      80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+      }
+
+      90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+      }
+
+      100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+      }
+    }
+
+    .hvr-buzz-out {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    }
+
+    .hvr-buzz-out:hover,
+    .hvr-buzz-out:focus,
+    .hvr-buzz-out:active {
+      -webkit-animation-name: hvr-buzz-out;
+      animation-name: hvr-buzz-out;
+      -webkit-animation-duration: 0.75s;
+      animation-duration: 0.75s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+
+
+    .hvr-grow {
+      display: flex;
+      align-content: center;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+    }
+
+    .hvr-grow:hover,
+    .hvr-grow:focus,
+    .hvr-grow:active {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .gallery {
+      background: rgb(255, 255, 255);
+    }
+
+    .gallery-cell {
+      width: 20%;
+      height: auto;
+      margin-right: 10px;
+      /* background: #8C8; */
+      /* counter-increment: gallery-cell; */
+    }
+
+    .gallery-cell img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* cell number */
+    .gallery-cell:before {
+      display: block;
+      text-align: center;
+      /* content: counter(gallery-cell); */
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+
+
+    }
+
+    @media screen and (min-width: 768px) {
+      .carousel-cell {
+        height: 400px;
+      }
+
+      @media screen and (min-width: 960px) {
+        .carousel-cell {
+          width: 60%;
         }
-
-/* Bob */
-@-webkit-keyframes hvr-bob {
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-  50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@keyframes hvr-bob {
-  0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-  50% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@-webkit-keyframes hvr-bob-float {
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-@keyframes hvr-bob-float {
-  100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
-.hvr-bob {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
-  -webkit-animation-name: hvr-bob-float, hvr-bob;
-  animation-name: hvr-bob-float, hvr-bob;
-  -webkit-animation-duration: .3s, 1.5s;
-  animation-duration: .3s, 1.5s;
-  -webkit-animation-delay: 0s, .3s;
-  animation-delay: 0s, .3s;
-  -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
-  -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate;
-}
-
-/* Buzz Out */
-@-webkit-keyframes hvr-buzz-out {
-  10% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  20% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-  30% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  40% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-  50% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg);
-  }
-  60% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  70% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg);
-  }
-  80% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  90% {
-    -webkit-transform: translateX(1px) rotate(0);
-    transform: translateX(1px) rotate(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1px) rotate(0);
-    transform: translateX(-1px) rotate(0);
-  }
-}
-@keyframes hvr-buzz-out {
-  10% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  20% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-  30% {
-    -webkit-transform: translateX(3px) rotate(2deg);
-    transform: translateX(3px) rotate(2deg);
-  }
-  40% {
-    -webkit-transform: translateX(-3px) rotate(-2deg);
-    transform: translateX(-3px) rotate(-2deg);
-  }
-  50% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg);
-  }
-  60% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  70% {
-    -webkit-transform: translateX(2px) rotate(1deg);
-    transform: translateX(2px) rotate(1deg);
-  }
-  80% {
-    -webkit-transform: translateX(-2px) rotate(-1deg);
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  90% {
-    -webkit-transform: translateX(1px) rotate(0);
-    transform: translateX(1px) rotate(0);
-  }
-  100% {
-    -webkit-transform: translateX(-1px) rotate(0);
-    transform: translateX(-1px) rotate(0);
-  }
-}
-.hvr-buzz-out {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-buzz-out:hover, .hvr-buzz-out:focus, .hvr-buzz-out:active {
-  -webkit-animation-name: hvr-buzz-out;
-  animation-name: hvr-buzz-out;
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-
-        .hvr-grow {
-            display: flex;
-            align-content: center;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-            -webkit-transition-property: transform;
-            transition-property: transform;
-        }
-
-        .hvr-grow:hover,
-        .hvr-grow:focus,
-        .hvr-grow:active {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-        }
-
-        .gallery {
-            background: rgb(255, 255, 255);
-        }
-
-        .gallery-cell {
-            width: 20%;
-            height: auto;
-            margin-right: 10px;
-            /* background: #8C8; */
-            /* counter-increment: gallery-cell; */
-        }
-
-        .gallery-cell img {
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        /* cell number */
-        .gallery-cell:before {
-            display: block;
-            text-align: center;
-            /* content: counter(gallery-cell); */
-            line-height: 200px;
-            font-size: 80px;
-            color: white;
-
-
-        }
-
-        @media screen and (min-width: 768px) {
-            .carousel-cell {
-                height: 400px;
-            }
-
-            @media screen and (min-width: 960px) {
-                .carousel-cell {
-                    width: 60%;
-                }
-            }
-        }
-    </style>
+      }
+    }
+  </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo hvr-bob hvr-bob-float" href="index.html">Matias Tong</a><button data-toggle="collapse"
-                class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item navbar-text" role="presentation"><a class="nav-link active"
-                            href="index.html">Home</a></li>
-                    <li class="nav-item navbar-text" role="presentation"><a class="nav-link"
-                            href="projects-grid-cards.html">Projects</a></li>
-                    <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
-                    <!-- <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="hire-me.html">Hire
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+    <div class="container"><a class="navbar-brand logo hvr-bob hvr-bob-float" href="index.html">Matias Tong</a><button
+        data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle
+          navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item navbar-text" role="presentation"><a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item navbar-text" role="presentation"><a class="nav-link"
+              href="projects-grid-cards.html">Projects</a></li>
+          <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
+          <!-- <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="hire-me.html">Hire
                             me</a></li> -->
-                </ul>
+        </ul>
+      </div>
+
+      <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
+        <span class="fa-stack fa-1x">
+          <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.651); "></i>
+          <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
+        </span>
+      </a>
+
+      <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
+        <span class="fa-stack fa-1x">
+          <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.651); "></i>
+          <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
+        </span>
+      </a>
+
+    </div>
+  </nav>
+  <main class="page lanidng-page">
+    <div id="header">
+      <section class="portfolio-block website gradient"
+        style=" background: linear-gradient(120deg,#2f358086,#94924669);">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-12 col-lg-5 offset-lg-1 text">
+              
+              <h2 style="font-weight: bold;"> Hi there!</h2>
+            
+              <h3>I'm <strong>Matias Tong</strong>. I am an aspiring full stack web developer with a passion
+                for building things with an impact.</h3>
+                <a href="cv.html"><button class="btn btn-outline-primary btn-lg hvr-buzz-out" type="button"
+                  style="font-size: 2rem;"> 👋</button></a>
+            
+            </div>
+            <div class="col-sm-12 col-lg-5 ">
+              <!-- <div class="portfolio-laptop-mockup"> -->
+              <!-- <div class="screen"> -->
+              <img src="img/portrait.png" class="img-thumbnail"
+                style="height:200px; width:200px; border-radius: 50%;"></img>
+              <!-- </div> -->
+              <!-- <div class="keyboard"></div> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="portfolio-block skills">
+      <div class="container">
+        <div class="heading mb-0 pb-0">
+          <h2>Special Skills</h2>
+        </div>
+        <div class="row mt-0 mb-3">
+          <div class="col-12 gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/java.png" class="img-fluid"
+                style=" border-radius: 50%; display:inline-block;"></img>
+
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/spring.png" class="img-fluid"
+                style="  border-radius: 50%; display:inline-block;"></img>
+
+            </div>
+            <div class=" gallery-cell justify-content-center">
+              <img src="img/languages/javascript.png" class="img-fluid"
+                style="border-radius: 50%; display:inline-block;"></img>
+
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/html.png" class="img-fluid"
+                style=" border-radius: 50%; display:inline-block;"></img>
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/css.png" class="img-fluid"
+                style=" border-radius: 50%; display:inline-block;"></img>
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/bootstrap.png" class="img-fluid"
+                style=" border-radius: 50%; display:inline-block;"></img>
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/arcgis.png" class="img-fluid"
+                style=" border-radius: 50%; display:inline-block;"></img>
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/r.png" class="img-fluid" style=" border-radius: 50%; display:inline-block;"></img>
             </div>
 
-            <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
-                <span class="fa-stack fa-1x">
-                    <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.651); "></i>
-                    <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
-                </span>
-            </a>
 
-            <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
-                <span class="fa-stack fa-1x">
-                    <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.651); "></i>
-                    <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
-                </span>
-            </a>
+          </div>
+
 
         </div>
-    </nav>
-    <main class="page lanidng-page">
-        <div id="header">
-            <section class="portfolio-block website gradient"
-                style=" background: linear-gradient(120deg,#2f358086,#94924669);">
-                <div class="container">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-md-12 col-lg-5 offset-lg-1 text">
-                            <h2 style="font-weight: bold;">Hi there!</h2>
-                            <h3>I'm <strong>Matias Tong</strong>. I am an aspiring full stack web developer with a passion
-                                for
-                                building things with an impact.</h3>
-                            <a href ="cv.html" ><button class="btn btn-outline-primary btn-lg hvr-buzz-out" type="button" style="font-size: 1.8rem;"> 👋</button></a>
-                        </div>
-                        <div class="col-sm-12 col-lg-5 ">
-                            <!-- <div class="portfolio-laptop-mockup"> -->
-                            <!-- <div class="screen"> -->
-                            <img src="img/portrait.png" class="img-thumbnail"
-                                style="height:200px; width:200px; border-radius: 50%;"></img>
-                            <!-- </div> -->
-                            <!-- <div class="keyboard"></div> -->
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
+      </div>
+    </section>
+
+
+    <section class="portfolio-block block-intro " style="background-color: rgb(248, 248, 248);">
+      <div class="container-fluid">
+        <div class="about-me">
+          <p style="font-size: 2rem">“Give a man a program, frustrate him for a day.
+            Teach a man to program, frustrate him for a lifetime.” – Muhammad Waseem.</p>
+
+          <!-- “Programmer — an organism that turns coffee into software” anonymous quote -->
+          <!-- <a class="btn btn-outline-primary" role="button" href="#">Hire me</a> -->
         </div>
+      </div>
+    </section>
 
-        <section class="portfolio-block skills">
-            <div class="container">
-                <div class="heading mb-0 pb-0">
-                    <h2>Special Skills</h2>
-                </div>
-                <div class="row mt-0 mb-3">
-                    <div class="col-12 gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/java.png" class="img-fluid"
-                                style=" border-radius: 50%; display:inline-block;"></img>
-
-                        </div>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/spring.png" class="img-fluid"
-                                style="  border-radius: 50%; display:inline-block;"></img>
-
-                        </div>
-                        <div class=" gallery-cell justify-content-center">
-                            <img src="img/languages/javascript.png" class="img-fluid"
-                                style="border-radius: 50%; display:inline-block;"></img>
-
-                        </div>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/html.png" class="img-fluid"
-                                style=" border-radius: 50%; display:inline-block;"></img>
-                        </div>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/css.png" class="img-fluid"
-                                style=" border-radius: 50%; display:inline-block;"></img>
-                        </div>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/bootstrap.png" class="img-fluid"
-                                style=" border-radius: 50%; display:inline-block;"></img>
-                        </div>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/arcgis.png" class="img-fluid"
-                                style=" border-radius: 50%; display:inline-block;"></img>
-                        </div>
-                        <div class="gallery-cell justify-content-center">
-                            <img src="img/languages/r.png" class="img-fluid"
-                                style=" border-radius: 50%; display:inline-block;"></img>
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="portfolio-block block-intro " style="background-color: rgb(248, 248, 248);">
-            <div class="container-fluid">
-                <div class="about-me">
-                    <p style="font-size: 2rem">“Give a man a program, frustrate him for a day.
-                        Teach a man to program, frustrate him for a lifetime.” – Muhammad Waseem.</p>
-
-                        <!-- “Programmer — an organism that turns coffee into software” anonymous quote -->
-                    <!-- <a class="btn btn-outline-primary" role="button" href="#">Hire me</a> -->
-                </div>
-            </div>
-        </section>
-
-        <section class="portfolio-block skills border-bottom-0 pb-2 mb-2 ">
-            <div class="container">
-                <div class="heading mb-3 pb-3">
-                    <h2>Featured Project</h2>
-                </div>
-                <!-- <div class="row no-gutters">
+    <section class="portfolio-block skills border-bottom-0 pb-2 mb-2 ">
+      <div class="container">
+        <div class="heading mb-3 pb-3">
+          <h2>Featured Project</h2>
+        </div>
+        <!-- <div class="row no-gutters">
                     <div class="col-7 item"><a href="#">
                             <img class="img-fluid image" src="assets/img/nature/image5.jpg">
                         </a>
@@ -393,36 +431,37 @@
                         <a class="btn btn-outline-primary" role="button" href="#">Hire me</a> 
                     </div> -->
 
-            </div>
-        </section>
+      </div>
+    </section>
 
-        <section class="portfolio-block photography">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img class="img-fluid image"
-                                src="img/bloghome2.png"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img class="img-fluid image"
-                                src="img/blogdashboard.png"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img class="img-fluid image"
-                                src="img/superhero.png"></a></div>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio-block call-to-action border-bottom pt-4">
-            <div class="container">
-                <div class="d-flex justify-content-center align-items-center content">
-                    <h3 class="mr-2"></h3><a href="projects-grid-cards.html" class="ml-0 btn btn-outline-primary btn-md">Projects
-                        <span>
-                            <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <section class="portfolio-block photography">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img
+                class="img-fluid image" src="img/bloghome2.png"></a></div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img
+                class="img-fluid image" src="img/blogdashboard.png"></a></div>
+          <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="projects-grid-cards.html"><img
+                class="img-fluid image" src="img/superhero.png"></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-block call-to-action border-bottom pt-4">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center content">
+          <h3 class="mr-2"></h3><a href="projects-grid-cards.html" class="ml-0 btn btn-outline-primary btn-md">Projects
+            <span>
+              <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i><i
+                class="fas fa-chevron-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
 
 
-    </main>
-    <!-- <section class="portfolio-block website gradient">
+  </main>
+  <!-- <section class="portfolio-block website gradient">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-12 col-lg-5 offset-lg-1 text">
@@ -443,43 +482,43 @@
             </div>
         </div>
     </section> -->
-    <footer class="page-footer">
-        <div class="container">
-            <div class="links">
-                <!-- <a href="#">About me</a> -->
-                <a href="index.html">Home</a>
-                <a href="projects-grid-cards.html">Projects</a></div>
-            <div class="row justify-content-center mt-4">
-                <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
-                    <span class="fa-stack fa-1x">
-                        <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
-                        <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
-                    </span>
-                </a>
-    
-                <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
-                    <span class="fa-stack fa-1x">
-                        <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
-                        <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
-                    </span>
-                </a>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="links">
+        <!-- <a href="#">About me</a> -->
+        <a href="index.html">Home</a>
+        <a href="projects-grid-cards.html">Projects</a></div>
+      <div class="row justify-content-center mt-4">
+        <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
+          <span class="fa-stack fa-1x">
+            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
+            <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
+          </span>
+        </a>
 
-            </div>
-        </div>
-    </footer>
-    <!-- carousel -->
-    <script>
-        var flkty = new Flickity('.main-gallery', {
-            // options
-            cellAlign: 'left',
-            contain: true
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+        <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
+          <span class="fa-stack fa-1x">
+            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
+            <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </footer>
+  <!-- carousel -->
+  <script>
+    var flkty = new Flickity('.main-gallery', {
+      // options
+      cellAlign: 'left',
+      contain: true
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+  <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
