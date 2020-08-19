@@ -29,14 +29,27 @@
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
         }
+
+        #navbar {
+            background-color: #333;
+            /* Black background color */
+            position: fixed;
+            /* Make it stick/fixed */
+            top: 0;
+            /* Stay on top */
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            /* Transition effect when sliding down (and up) */
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo hvr-bob hvr-bob-float" href="index.html">Matias Tong</a><button data-toggle="collapse"
-                class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" id="navbar">
+        <div class="container"><a class="navbar-brand logo hvr-bob hvr-bob-float" href="index.html">Matias
+                Tong</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span
+                    class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item navbar-text" role="presentation"><a class="nav-link active"
@@ -73,64 +86,85 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/bloghome2.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/bloghome2.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Content Management System: Blog Site</a></h6>
-                                <p class="text-muted card-text">A full stack web app that reads blog content from a database, loads content by tags, and sorts static content. Equipped with login and user authentification </p>
-                                <p class="text-muted card-text"> Technologies used: Spring JDBC, Spring MVC, Spring Security, Thymeleaf, MySQL, JUnit Tests</p>
+                                <p class="text-muted card-text">A full stack web app that reads blog content from a
+                                    database, loads content by tags, and sorts static content. Equipped with login and
+                                    user authentification </p>
+                                <p class="text-muted card-text"> Technologies used: Spring JDBC, Spring MVC, Spring
+                                    Security, Thymeleaf, MySQL, JUnit Tests</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/blogdashboard.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/blogdashboard.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Content Management System: Editor Dashboard</a></h6>
-                                <p class="text-muted card-text">From the blog site, users with admin or content-manager permission can access the editor dashboard 
-                                    and use different tools for managing users, content, tags, 
+                                <p class="text-muted card-text">From the blog site, users with admin or content-manager
+                                    permission can access the editor dashboard
+                                    and use different tools for managing users, content, tags,
                                     depending on the permission granted to the user.</p>
-                                <p class="text-muted card-text"> Technologies used: Spring JDBC, Spring MVC, Spring Security, Thymeleaf, MySQL, JUnit Tests</p>
+                                <p class="text-muted card-text"> Technologies used: Spring JDBC, Spring MVC, Spring
+                                    Security, Thymeleaf, MySQL, JUnit Tests</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/superhero.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/superhero.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Superhero Sightings Database (Team Project)</a></h6>
-                                <p class="text-muted card-text">A full stack web app for reporting hero sightings by cataloging hero, superpower, organization, and location information.</p>
-                                 <p class="text-muted card-text"> Technologies used: Spring JDBC, Spring MVC, Thymeleaf, MySQL, JUnit Tests</p>
+                                <p class="text-muted card-text">A full stack web app for reporting hero sightings by
+                                    cataloging hero, superpower, organization, and location information.</p>
+                                <p class="text-muted card-text"> Technologies used: Spring JDBC, Spring MVC, Thymeleaf,
+                                    MySQL, JUnit Tests</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/vendingmachine.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/vendingmachine.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Vending Machine</a></h6>
-                                <p class="text-muted card-text">A virtual vending machine app that loads items from an API and contains business logic
-                                     to accept money, return change, and display error messages when the item is unavailable. </p>
-                                     <p class="text-muted card-text"> Technologies used: AJAX, jQuery, Postman, HTTP requests </p>
+                                <p class="text-muted card-text">A virtual vending machine app that loads items from an
+                                    API and contains business logic
+                                    to accept money, return change, and display error messages when the item is
+                                    unavailable. </p>
+                                <p class="text-muted card-text"> Technologies used: AJAX, jQuery, Postman, HTTP requests
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/flooring2.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/flooring2.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Flooring Company Ordering System</a></h6>
-                                <p class="text-muted card-text">A business application that allows users to add, delete,and edit clients and orders.
-                                     It is also capable of reading and writing to files to allow for product and state tax updates</p>
-                                     <p class="text-muted card-text"> Technologies used: Spring MVC, Dependency Injection, JUnit tests</p>
+                                <p class="text-muted card-text">A business application that allows users to add,
+                                    delete,and edit clients and orders.
+                                    It is also capable of reading and writing to files to allow for product and state
+                                    tax updates</p>
+                                <p class="text-muted card-text"> Technologies used: Spring MVC, Dependency Injection,
+                                    JUnit tests</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/restaurantjs.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/restaurantjs.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Ice Cream Shop 2.0</a></h6>
-                                <p class="text-muted card-text">Restaurant website using Javascript, HTML, CSS and Bootstrap</p>
+                                <p class="text-muted card-text">Restaurant website using Javascript, HTML, CSS and
+                                    Bootstrap</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/restaurant.png" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="img/restaurant.png" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">Ice Cream Shop 1.0</a></h6>
                                 <p class="text-muted card-text">Restaurant website using HTML and CSS</p>
@@ -154,7 +188,7 @@
                         <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
                     </span>
                 </a>
-    
+
                 <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
                     <span class="fa-stack fa-1x">
                         <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
@@ -165,6 +199,18 @@
             </div>
         </div>
     </footer>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
