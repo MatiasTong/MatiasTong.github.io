@@ -7,10 +7,11 @@ import { faHeart as faHeartSolid} from '@fortawesome/free-solid-svg-icons'
 class Like extends React.Component {
 
     render(){
+        let heart = faHeart;
+        if (this.props.liked === true) {heart = faHeartSolid}; 
+
         return(
-            <div>
-                <FontAwesomeIcon icon={faHeartSolid} />
-            </div>
+                <FontAwesomeIcon style = {{cursor:"pointer"}}onClick = {this.props.onToggle} icon={heart} />
         )
     }
     
