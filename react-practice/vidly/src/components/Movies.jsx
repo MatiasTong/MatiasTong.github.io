@@ -14,11 +14,13 @@ class Movies extends Component {
         movies: [],
         genres: [],
         pageSize: 4,
-        currentPage: 1
+        currentPage: 1,
+        selectedGenre: ""
     }
 
     componentDidMount() {
-        this.setState({ movies: getMovies(), genres: getGenres() })
+        const genres = [{name: "All Genres"}, ...getGenres()]
+        this.setState({ movies: getMovies(), genres: genres })
     }
 
     handleDelete = (movie) => {
@@ -41,24 +43,30 @@ class Movies extends Component {
     }
 
     handleGenreSelect = genre => {
-       this.setState({selectedGenre : genre});
+        this.setState({ selectedGenre: genre, currentPage:1 });
     }
 
     render() {
         // an array is an object with a length property
-        const { length: count } = this.state.movies
-        const { currentPage, pageSize, movies: allMovies } = this.state
+        const { currentPage, pageSize, selectedGenre, movies: allMovies } = this.state
+        //the id is included to make the all genres filter work which has no id
+        const filtered = selectedGenre && selectedGenre._id? allMovies.filter(m => (
+            m.genre._id === selectedGenre._id)) : allMovies
+
+        const { length: count } = filtered
+        
         if (count === 0) return <p>There are no movies to display</p>
 
-        const movies = paginate(allMovies, currentPage, pageSize)
+
+        const movies = paginate(filtered, currentPage, pageSize)
 
         return (
             <div className="row">
                 <div className="col-3">
-                    <ListGroup 
-                    items={this.state.genres} 
-                    selectedItem = {this.state.selectedGenre}
-                    onItemSelect = {this.handleGenreSelect} />
+                    <ListGroup
+                        items={this.state.genres}
+                        selectedItem={this.state.selectedGenre}
+                        onItemSelect={this.handleGenreSelect} />
 
                 </div>
                 <div className="col">
@@ -94,14 +102,14 @@ class Movies extends Component {
                     </table>
 
                 </div>
-            
-            <Pagination
-                itemCount={count}
-                pageSize={pageSize}
-                onPageChange={this.handlePageChange}
-                currentPage={currentPage}
-            />
-           </div>
+
+                <Pagination
+                    itemCount={filtered.length}
+                    pageSize={pageSize}
+                    onPageChange={this.handlePageChange}
+                    currentPage={currentPage}
+                />
+            </div>
 
         );
     }
