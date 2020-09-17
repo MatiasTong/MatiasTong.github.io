@@ -19,7 +19,7 @@ class Movies extends Component {
     }
 
     componentDidMount() {
-        const genres = [{name: "All Genres"}, ...getGenres()]
+        const genres = [{ name: "All Genres" }, ...getGenres()]
         this.setState({ movies: getMovies(), genres: genres })
     }
 
@@ -43,18 +43,18 @@ class Movies extends Component {
     }
 
     handleGenreSelect = genre => {
-        this.setState({ selectedGenre: genre, currentPage:1 });
+        this.setState({ selectedGenre: genre, currentPage: 1 });
     }
 
     render() {
         // an array is an object with a length property
         const { currentPage, pageSize, selectedGenre, movies: allMovies } = this.state
         //the id is included to make the all genres filter work which has no id
-        const filtered = selectedGenre && selectedGenre._id? allMovies.filter(m => (
+        const filtered = selectedGenre && selectedGenre._id ? allMovies.filter(m => (
             m.genre._id === selectedGenre._id)) : allMovies
 
         const { length: count } = filtered
-        
+
         if (count === 0) return <p>There are no movies to display</p>
 
 

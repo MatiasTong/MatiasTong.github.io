@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
   <script src="https://kit.fontawesome.com/16c75b70ae.js" crossorigin="anonymous"></script>
-  
-  <!-- carousel -->
+
+
+  <!-- Flickety carousel -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" media="screen"> -->
   <style>
     #header {
@@ -304,6 +306,7 @@
           <li class="nav-item navbar-text" role="presentation"><a class="nav-link"
               href="projects-grid-cards.html">Projects</a></li>
           <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="hire-me.html">Contact Me</a></li>
           <!-- <li class="nav-item navbar-text" role="presentation"><a class="nav-link" href="hire-me.html">Hire
                             me</a></li> -->
         </ul>
@@ -332,14 +335,14 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-12 col-lg-5 offset-lg-1 text">
-              
+
               <h2 style="font-weight: bold;"> Hi there!</h2>
-            
+
               <h3>I'm <strong>Matias Tong</strong>. I am an aspiring full stack web developer with a passion
                 for building things with an impact.</h3>
-                <a href="cv.html"><button class="btn btn-outline-primary btn-lg hvr-buzz-out" type="button"
+              <a href="cv.html"><button class="btn btn-outline-primary btn-lg hvr-buzz-out" type="button"
                   style="font-size: 2rem;"> 👋</button></a>
-            
+
             </div>
             <div class="col-sm-12 col-lg-5 ">
               <!-- <div class="portfolio-laptop-mockup"> -->
@@ -361,11 +364,10 @@
           <h2>Special Skills</h2>
         </div>
         <div class="row mt-0 mb-3">
-          <div class="col-12 gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+          <div class="col-12 gallery js-flickity" data-flickity='{ "freeScroll": true, "wrapAround": true }'>
             <div class="gallery-cell justify-content-center">
               <img src="img/languages/java.png" class="img-fluid"
                 style=" border-radius: 50%; display:inline-block;"></img>
-
             </div>
             <div class="gallery-cell justify-content-center">
               <img src="img/languages/spring.png" class="img-fluid"
@@ -383,6 +385,10 @@
             </div>
             <div class="gallery-cell justify-content-center">
               <img src="img/languages/css.png" class="img-fluid"
+                style=" border-radius: 50%; display:inline-block;"></img>
+            </div>
+            <div class="gallery-cell justify-content-center">
+              <img src="img/languages/react2.png" class="img-fluid"
                 style=" border-radius: 50%; display:inline-block;"></img>
             </div>
             <div class="gallery-cell justify-content-center">
@@ -490,32 +496,31 @@
         <!-- <a href="#">About me</a> -->
         <a href="index.html">Home</a>
         <a href="projects-grid-cards.html">Projects</a></div>
-      <div class="row justify-content-center mt-4">
-        <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
-          <span class="fa-stack fa-1x">
-            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
-            <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
-          </span>
-        </a>
+      <a href="hire-me.html">Contact Me</a>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <a class="hvr-grow justify-content-center" href="https://www.linkedin.com/in/matiastong">
+        <span class="fa-stack fa-1x">
+          <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
+          <i class="fab fa-linkedin-in fa-stack-1x" style="color:white;"></i>
+        </span>
+      </a>
 
-        <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
-          <span class="fa-stack fa-1x">
-            <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
-            <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
-          </span>
-        </a>
+      <a class="hvr-grow justify-content-center" href="https://github.com/MatiasTong">
+        <span class="fa-stack fa-1x">
+          <i class="backicon fas fa-circle fa-stack-2x" style="color:rgba(105, 104, 104, 0.466); "></i>
+          <i class="fab fa-github fa-stack-1x" style="color:white; "></i>
+        </span>
+      </a>
 
-      </div>
+    </div>
     </div>
   </footer>
   <!-- carousel -->
-  <script>
-    var flkty = new Flickity('.main-gallery', {
-      // options
-      cellAlign: 'left',
-      contain: true
-    });
-  </script>
+  <!-- <script>
+    const flkty = new Flickity('.main-gallery', {cellAlign: 'left', contain: true});
+  </script> -->
+
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
