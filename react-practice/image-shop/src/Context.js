@@ -20,6 +20,10 @@ function ContextProvider(props) {
         console.log(cartItems)
     }
 
+    const emptyCart =()=>{
+        setCartItems([])
+    }
+
     useEffect(()=> {
         fetch("https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json")
             .then(res => res.json())
@@ -27,7 +31,7 @@ function ContextProvider(props) {
     }, [])
 
     return (
-        <Context.Provider value={{ allPhotos, cartItems, toggleFavorite, addImageToCart, removeImageFromCart }}>
+        <Context.Provider value={{ allPhotos, cartItems, toggleFavorite, addImageToCart, removeImageFromCart, emptyCart }}>
             {props.children}
         </Context.Provider>
     )
