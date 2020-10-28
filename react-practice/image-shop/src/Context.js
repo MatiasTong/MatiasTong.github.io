@@ -25,7 +25,12 @@ function ContextProvider(props) {
     }
 
     useEffect(()=> {
-        fetch("https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json")
+        fetch("https://api.yelp.com/v3/businesses/search?location=nyc",
+        {
+            method: 'GET',
+            headers: new Headers({'content-type': 'application/json'}),
+            mode: 'cors'
+        })
             .then(res => res.json())
             .then(data => setAllPhotos(data))
     }, [])
