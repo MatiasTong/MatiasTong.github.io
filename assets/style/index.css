@@ -1,0 +1,9 @@
+.portfolio-block.block-intro{
+    color: white;
+    font-weight: bolder;
+    background: linear-gradient(120deg,#94924669,#2f358086), url("https://images.unsplash.com/photo-1601758282760-b6cc3d07523d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80") 0 0 no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+    /* background-image: url("https://images.unsplash.com/photo-1486551937199-baf066858de7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1092&q=80"); */
+}
